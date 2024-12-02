@@ -1,0 +1,154 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+    font-family: 'Poppins';
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.container6 {
+    display: flex;
+    flex-direction: row; /* Elemen dalam baris */
+    padding: 35px 10%; /* Ruang dalam footer */
+    align-items: flex-start; /* Sejajarkan elemen ke atas */
+    gap: 2rem; /* Jarak antar elemen */
+    background: #2A2A2A;
+    height: auto;
+    justify-content: space-between; /* Jarak antar elemen kiri dan kanan */
+}
+
+.container6 img {
+    max-width: 300px; /* Ukuran maksimal logo */
+    height: auto; /* Sesuaikan proporsi logo */
+}
+
+.footer-description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar elemen dalam footer */
+}
+
+.footer-alamat,
+.social-media ul {
+    display: flex;
+    align-items: flex-start; /* Sejajarkan teks dan ikon ke atas */
+    gap: 10px;
+    flex-direction: row; /* Elemen dalam baris */
+}
+
+.footer-alamat i {
+    color: #FFCA24;
+    font-size: 20px; /* Ukuran ikon alamat */
+}
+
+.footer-alamat a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-alamat a:hover {
+    color: #FFCA24;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media a:hover {
+    color: #FFCA24;
+}
+
+.social-media i {
+    font-size: 18px; /* Ukuran ikon social media */
+}
+
+footer p {
+    text-align: center;
+    background-color: #2A2A2A;
+    color: #FFF;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* Atur semua container menggunakan flex-direction: column */
+    .container1, .container2, .container3, .container4, .container5, .container6 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Konten berada di tengah */
+        text-align: center;  /* Untuk teks agar lebih rapi */
+        gap: 20px; /* Sesuaikan jarak antar elemen */
+        padding: 20px; /* Kurangi padding agar lebih cocok untuk layar kecil */
+    }
+    
+    .container1 .gambarkanan1,
+    .container3 .gambarkanan2,
+    .container5 .gambarkanan3 {
+        order: -1; /* Pindahkan elemen ke urutan pertama */
+    }
+
+    /* Pastikan elemen lain (teks <p>) tetap di bawah */
+    .container1 p,
+    .container3 p,
+    .container5 p {
+        order: 0; /* Tetap di bawah elemen gambar */
+    }
+    
+
+    /* Atur konten gambar dan teks agar sejajar di tengah */
+    .container1 img, .container2 img, .container3 img, .container4 img, .container5 img {
+        margin-bottom: 20px; /* Tambahkan jarak antara gambar dan teks */
+    }
+
+    /* Footer: Konten sosial media di tengah */
+    .container6 {
+        flex-direction: column; /* Elemen menjadi vertikal */
+        align-items: center; /* Semua elemen di tengah */
+        padding: 20px; /* Kurangi padding */
+        gap: 1.5rem;
+    }
+
+    .container6 img {
+        max-width: 200px; /* Ukuran gambar lebih kecil */
+    }
+
+    .container6 p {
+        text-align: center; /* Teks rata tengah */
+        max-width: 100%; /* Hapus batas lebar untuk layar kecil */
+    }
+
+    .social-media {
+        align-items: center; /* Sosial media berada di tengah */
+    }
+
+    .social-media li {
+        gap: 10px; /* Jarak antar elemen */
+    }
+
+    footer .social-media {
+        margin-bottom: 20px; /* Jarak dengan elemen lainnya */
+    }
+}

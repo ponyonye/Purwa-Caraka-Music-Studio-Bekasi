@@ -1,0 +1,251 @@
+html {
+    scroll-behavior: smooth;
+}
+/* Body */
+body {
+    font-family: 'Poppins';
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+
+/* Container 1 */
+.container1 {
+    max-width: 800px; /* Membatasi lebar card */
+    margin: 50px auto; /* Memusatkan card di tengah halaman */
+    text-align: center; /* Teks di tengah */
+}
+
+.container1 h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.container1 p {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.container1 .gambarteks {
+    display: flex; /* Menyusun gambar dan teks secara horizontal */
+    justify-content: center; /* Memusatkan konten */
+    align-items: center; /* Menyelaraskan gambar dan teks vertikal */
+    gap: 20px; /* Memberikan jarak antara gambar dan teks */
+}
+
+.container1 img {
+    width: 300px; /* Ukuran gambar */
+    height: auto;
+    border-radius: 5px; /* Memberikan sudut melengkung pada gambar */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut */
+}
+
+.container1 .textdikanan {
+    max-width: 300px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #333;
+    font-style: italic; /* Membuat teks miring */
+}
+
+/* Container 2 */
+.container2 {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 200px 30px 50px;
+    align-items: center;
+    gap: 0px;
+    background-color: #FFCA24;
+}
+
+.tekskiri {
+    padding: 10px 80px 20px 70px;
+}
+
+.tekskanan {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px 0px 30px 400px;
+}
+
+.tekskanan li {
+    list-style: none;
+}
+
+/* Container 3 */
+.container3 {
+    display: flex;
+    height: 169px;
+    padding: 39px 323px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container3 p {
+    color: #000;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+.container6 {
+    display: flex;
+    flex-direction: row; /* Elemen dalam baris */
+    padding: 35px 10%; /* Ruang dalam footer */
+    align-items: flex-start; /* Sejajarkan elemen ke atas */
+    gap: 2rem; /* Jarak antar elemen */
+    background: #2A2A2A;
+    height: auto;
+    justify-content: space-between; /* Jarak antar elemen kiri dan kanan */
+}
+
+.container6 img {
+    max-width: 300px; /* Ukuran maksimal logo */
+    height: auto; /* Sesuaikan proporsi logo */
+}
+
+.footer-description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar elemen dalam footer */
+}
+
+.footer-alamat,
+.social-media ul {
+    display: flex;
+    align-items: flex-start; /* Sejajarkan teks dan ikon ke atas */
+    gap: 10px;
+    flex-direction: row; /* Elemen dalam baris */
+}
+
+.footer-alamat i {
+    color: #FFCA24;
+    font-size: 20px; /* Ukuran ikon alamat */
+}
+
+.footer-alamat a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-alamat a:hover {
+    color: #FFCA24;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media a:hover {
+    color: #FFCA24;
+}
+
+.social-media i {
+    font-size: 18px; /* Ukuran ikon social media */
+}
+
+footer p {
+    text-align: center;
+    background-color: #2A2A2A;
+    color: #FFF;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsiveness */
+/* Tablet (768px - 1200px) */
+@media screen and (max-width: 1200px) {
+    .container2 {
+        padding: 20px;
+    }
+
+    .tekskanan {
+        padding: 20px;
+    }
+}
+
+/* Mobile (less than 768px) */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .container1 .gambarteks {
+        flex-direction: column;
+    }
+
+    .container2 {
+        padding: 10px;
+    }
+
+    .container3 {
+        padding: 10px;
+    }
+
+    .container6 {
+        flex-direction: column; /* Elemen menjadi vertikal */
+        align-items: center; /* Semua elemen di tengah */
+        padding: 20px; /* Kurangi padding */
+        gap: 1.5rem;
+    }
+
+    .container6 img {
+        max-width: 200px; /* Ukuran gambar lebih kecil */
+    }
+
+    .container6 p {
+        text-align: center; /* Teks rata tengah */
+        max-width: 100%; /* Hapus batas lebar untuk layar kecil */
+    }
+
+    .social-media {
+        align-items: center; /* Sosial media berada di tengah */
+    }
+
+    .social-media li {
+        gap: 10px; /* Jarak antar elemen */
+    }
+
+    footer .social-media {
+        margin-bottom: 20px; /* Jarak dengan elemen lainnya */
+    }
+ 
+}

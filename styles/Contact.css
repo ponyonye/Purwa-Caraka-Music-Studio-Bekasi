@@ -1,0 +1,265 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Universal styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0%;
+}
+
+body {
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Navigation */
+
+
+/* ini Main content */
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+}
+
+.title {
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.content-description {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+main .content-description p {
+  margin: auto;
+}
+
+.content-detail {
+  margin: 10px;
+}
+
+.content-image {
+  display: flex;
+  flex: 1 1 300px;
+  justify-content: center;
+}
+
+/* ini Footer cuy :v */
+.container6 {
+  display: flex;
+  flex-direction: row; /* Elemen dalam baris */
+  padding: 35px 10%; /* Ruang dalam footer */
+  align-items: flex-start; /* Sejajarkan elemen ke atas */
+  gap: 2rem; /* Jarak antar elemen */
+  background: #2A2A2A;
+  height: auto;
+  justify-content: space-between; /* Jarak antar elemen kiri dan kanan */
+}
+
+.container6 img {
+  max-width: 300px; /* Ukuran maksimal logo */
+  height: auto; /* Sesuaikan proporsi logo */
+}
+
+.footer-description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Jarak antar elemen dalam footer */
+}
+
+.footer-alamat,
+.social-media ul {
+  display: flex;
+  align-items: flex-start; /* Sejajarkan teks dan ikon ke atas */
+  gap: 10px;
+  flex-direction: row; /* Elemen dalam baris */
+}
+
+.footer-alamat i {
+  color: #FFCA24;
+  font-size: 20px; /* Ukuran ikon alamat */
+}
+
+.footer-alamat a {
+  text-decoration: none;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-alamat a:hover {
+  color: #FFCA24;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-media li {
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-media a:hover {
+  color: #FFCA24;
+}
+
+.social-media i {
+  font-size: 18px; /* Ukuran ikon social media */
+}
+
+footer p {
+  text-align: center;
+  background-color: #2A2A2A;
+  color: #FFF;
+  padding: 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Media Queries untuk Tablet dan Mobile */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 1rem;
+  }
+  
+  nav a {
+    font-size: 18px;
+  }
+
+
+  .header {
+    flex-direction: column; /*  stack logo dan menu */
+  }
+
+  .content {
+    flex-direction: column; /* membuat content jadi vertikal */
+  }
+
+  .footer {
+    flex-direction: column; /* Footer untuk vertikal */
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-description {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-description div {
+    margin: 10px 0;
+  }
+}
+
+/* Mobile (portrait) */
+@media (max-width: 768px) {
+  nav {
+    background-color: #FFF;
+    position: relative; /* Pastikan nav menjadi elemen referensi untuk posisi relatif */
+}
+
+button.humburger-menu {
+    display: inline;
+    position: absolute; /* Gunakan absolute untuk menempatkan tombol di posisi spesifik */
+    right: 20px; /* Letakkan 20px dari sisi kanan */
+    top: 20px; /* Atur jarak dari atas */
+    cursor: pointer; /* Tambahkan efek kursor untuk klik */
+}
+
+.menu {
+    display: none;
+}
+
+.tampil {
+    display: inline;
+    
+}
+
+.tampil > ul {
+    flex-direction: column;
+    background-color: #FFF;
+    width: 50%; /* Menu hanya menempati 50% lebar layar */
+    position: fixed;
+    top: 80px;
+    right: 0; /* Letakkan menu di sebelah kanan */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk tampilan menarik */
+    height: 100%; /* Agar menu memiliki tinggi penuh layar */
+}
+
+.tampil > ul > li {
+    padding: 0px;
+    border-bottom: 1px solid black;
+}
+
+  .content {
+    flex-direction: column; /* stack content jadi vertikal*/
+  }
+
+  .container6 {
+    flex-direction: column; /* Elemen menjadi vertikal */
+    align-items: center; /* Semua elemen di tengah */
+    padding: 20px; /* Kurangi padding */
+    gap: 1.5rem;
+}
+
+.container6 img {
+    max-width: 200px; /* Ukuran gambar lebih kecil */
+}
+
+.container6 p {
+    text-align: center; /* Teks rata tengah */
+    max-width: 100%; /* Hapus batas lebar untuk layar kecil */
+}
+
+.social-media {
+    align-items: center; /* Sosial media berada di tengah */
+}
+
+.social-media li {
+    gap: 10px; /* Jarak antar elemen */
+}
+
+footer .social-media {
+    margin-bottom: 20px; /* Jarak dengan elemen lainnya */
+}
+}
+
+/* Extra Small Mobile (hp mini) */
+@media (max-width: 480px) {
+  .footer-description p {
+    font-size: 12px;
+  }
+
+  .footer-description i {
+    font-size: 18px;
+  }
+}

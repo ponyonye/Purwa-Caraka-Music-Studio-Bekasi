@@ -1,0 +1,282 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Body */
+body {
+    font-family: 'Poppins';
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Main */
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center; /* Tetap sejajar kiri jika layar masih cukup */
+}
+
+/* Header */
+
+
+/* Container untuk box */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Membungkus elemen saat layar sempit */
+    gap: 1.5rem; /* Jarak antar elemen */
+    justify-content: space-between; /* Tata letak tetap rata kiri-kanan */
+    padding: 75px 10%; /* Atur padding agar tidak terlalu sempit */
+}
+
+.box {
+    justify-items: center;
+    flex: 1 1 calc(50% - 1.5rem); /* Dua box berdampingan pada layar cukup lebar */
+    max-width: 500px;
+    height: auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Info container */
+.info-container {
+    background-color: #ffffff; /* Warna latar putih */
+    border: 1px solid #ddd; /* Batas luar */
+    border-radius: 8px; /* Sudut melengkung */
+    padding: 20px; /* Jarak dalam */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+    width: 100%; /* Responsif */
+    max-width: 800px; /* Batas lebar maksimal */
+    margin: 20px auto; /* Tengah secara horizontal */
+    font-family: 'Poppins';
+}
+
+.info-container h1 {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Warna teks */
+}
+
+.info-container p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.info-container ul {
+    padding-left: 20px; /* Indentasi untuk simbol */
+    list-style-type: none; /* Simbol bulat */
+}
+
+.info-container ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.info-container .footer-note {
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Agar gambar dalam box tetap proporsional */
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    color: #333;
+    margin: 10px 0;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+    margin: 10px 15px;
+}
+
+/* Details */
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    margin: 10px auto;
+}
+
+/* Container6 */
+.container6 {
+    display: flex;
+    flex-direction: row; /* Elemen dalam baris */
+    padding: 35px 10%; /* Ruang dalam footer */
+    align-items: flex-start; /* Sejajarkan elemen ke atas */
+    gap: 2rem; /* Jarak antar elemen */
+    background: #2A2A2A;
+    height: auto;
+    justify-content: space-between; /* Jarak antar elemen kiri dan kanan */
+}
+
+.container6 img {
+    max-width: 300px; /* Ukuran maksimal logo */
+    height: auto; /* Sesuaikan proporsi logo */
+}
+
+.footer-description {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Jarak antar elemen dalam footer */
+}
+
+.footer-alamat,
+.social-media ul {
+    display: flex;
+    align-items: flex-start; /* Sejajarkan teks dan ikon ke atas */
+    gap: 10px;
+    flex-direction: row; /* Elemen dalam baris */
+}
+
+.footer-alamat i {
+    color: #FFCA24;
+    font-size: 20px; /* Ukuran ikon alamat */
+}
+
+.footer-alamat a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-alamat a:hover {
+    color: #FFCA24;
+}
+
+.social-media ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-media li {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-media a:hover {
+    color: #FFCA24;
+}
+
+.social-media i {
+    font-size: 18px; /* Ukuran ikon social media */
+}
+
+footer p {
+    text-align: center;
+    background-color: #2A2A2A;
+    color: #FFF;
+    padding: 10px 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* Media Query untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .container {
+        justify-content: center; /* Semua elemen ke tengah jika layar kecil */
+    }
+
+    .box {
+        flex: 1 1 100%; /* Box menjadi satu kolom penuh */
+    }
+
+    .container6 {
+        flex-direction: column; /* Elemen menjadi vertikal */
+        align-items: center; /* Semua elemen di tengah */
+        padding: 20px; /* Kurangi padding */
+        gap: 1.5rem;
+    }
+
+    .container6 img {
+        max-width: 200px; /* Ukuran gambar lebih kecil */
+    }
+
+    .container6 p {
+        text-align: center; /* Teks rata tengah */
+        max-width: 100%; /* Hapus batas lebar untuk layar kecil */
+    }
+
+    .social-media {
+        align-items: center; /* Sosial media berada di tengah */
+    }
+
+    .social-media li {
+        gap: 10px; /* Jarak antar elemen */
+    }
+
+    footer .social-media {
+        margin-bottom: 20px; /* Jarak dengan elemen lainnya */
+    }
+
+    nav {
+        background-color: #FFF;
+        position: relative; /* Pastikan nav menjadi elemen referensi untuk posisi relatif */
+    }
+    
+    button.humburger-menu {
+        display: inline;
+        position: absolute; /* Gunakan absolute untuk menempatkan tombol di posisi spesifik */
+        right: 20px; /* Letakkan 20px dari sisi kanan */
+        top: 20px; /* Atur jarak dari atas */
+        cursor: pointer; /* Tambahkan efek kursor untuk klik */
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    .tampil {
+        display: inline;
+        
+    }
+    
+    .tampil > ul {
+        flex-direction: column;
+        background-color: #FFF;
+        width: 50%; /* Menu hanya menempati 50% lebar layar */
+        position: fixed;
+        top: 80px;
+        right: 0; /* Letakkan menu di sebelah kanan */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk tampilan menarik */
+        height: 100%; /* Agar menu memiliki tinggi penuh layar */
+    }
+    
+    .tampil > ul > li {
+        padding: 0px;
+        border-bottom: 1px solid black;
+    }
+}
